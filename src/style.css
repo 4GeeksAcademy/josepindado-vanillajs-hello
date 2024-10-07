@@ -1,1 +1,30 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+#card {
+  background-color: white;
+  font-size: 7rem;
+  border: 1px black solid;
+  border-radius: 10px;
+  min-width: 300px;
+  max-height: 450px;
+  margin-top: 30px;
+  padding: 8px;
+}
+#valor {
+  text-align: center;
+  font-size: 1em;
+}
+
+.voltear {
+  transform: rotate(180deg);
+}
+
+.figura {
+  font-size: 0.8em;
+}
+button {
+  margin-top: 3em;
+}
