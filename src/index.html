@@ -18,17 +18,35 @@
         <div id="card" class="d-flex flex-column align-items-between">
           <div class="figura">♥</div>
           <div id="valor">A</div>
-          <div class="figura invertida">♥</div>
+          <div class="figura voltear">♥</div>
         </div>
       </div>
-      <div class="position-relative">
+      <div class="d-flex flex-column position-relative">
         <button
           id="nuevaCarta"
           type="button"
           class="position-absolute top-50 start-50 translate-middle btn btn-outline-light btn-lg"
         >
           Nueva carta
-        </button>
+       </button>
+       <div class="container text-center">
+        <div class="row-cols-auto mt-3">
+        <input
+          id="alto"
+          type="number"
+          placeholder="Alto"
+          class="col-2"
+        >
+        </input>
+        <input
+          id="ancho"
+          type="number"
+          placeholder="Ancho"
+          class="col-2"
+        >
+        </input>
+    </div>
+  </div>
       </div>
     </div>
   </body>

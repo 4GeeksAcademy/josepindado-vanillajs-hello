@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -38,5 +37,17 @@ function nuevaCarta() {
   for (let i = 0; i < figuras.length; i++) {
     figuras[i].innerText = figura;
     figuras[i].style.color = color;
+  }
+}
+
+const alto = document.getElementById("alto").value;
+const ancho = document.getElementById("ancho").value;
+
+document.getElementById("nuevaCarta").addEventListener("click", nuevoTamaño);
+
+function nuevoTamaño() {
+  if (alto > 0 && ancho > 0) {
+    document.getElementById("card").style.height = alto;
+    document.getElementById("card").style.width = ancho;
   }
 }
