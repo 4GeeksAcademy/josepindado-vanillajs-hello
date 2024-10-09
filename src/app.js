@@ -7,8 +7,9 @@ import "./assets/img/4geeks.ico";
 //--BOTON NUEVA CARTA--
 window.onload = function() {
   document.getElementById("nuevaCarta").addEventListener("click", nuevaCarta);
+  document.getElementById("nuevaCarta").addEventListener("click", nuevoTamaño);
 };
-// cree mi funcion que genera mi carta random
+
 function nuevaCarta() {
   let figura = Math.floor(Math.random() * 4);
   let arrFiguras = ["♦", "♥", "♠", "♣"];
@@ -43,11 +44,9 @@ function nuevaCarta() {
 const alto = document.getElementById("alto").value;
 const ancho = document.getElementById("ancho").value;
 
-document.getElementById("nuevaCarta").addEventListener("click", nuevoTamaño);
-
 function nuevoTamaño() {
   if (alto > 0 && ancho > 0) {
-    document.getElementById("card").style.height = alto;
-    document.getElementById("card").style.width = ancho;
+    document.getElementById("card").style.height = alto.value;
+    document.getElementById("card").style.width = ancho.value;
   }
 }
