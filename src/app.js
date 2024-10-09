@@ -7,7 +7,6 @@ import "./assets/img/4geeks.ico";
 //--BOTON NUEVA CARTA--
 window.onload = function() {
   document.getElementById("nuevaCarta").addEventListener("click", nuevaCarta);
-  document.getElementById("nuevaCarta").addEventListener("click", nuevoTamaño);
 };
 
 function nuevaCarta() {
@@ -41,12 +40,15 @@ function nuevaCarta() {
   }
 }
 
-const alto = document.getElementById("alto").value;
-const ancho = document.getElementById("ancho").value;
+const alto = document.getElementById("alto");
+const ancho = document.getElementById("ancho");
+const card = document.getElementById("card");
 
 function nuevoTamaño() {
-  if (alto > 0 && ancho > 0) {
-    document.getElementById("card").style.height = alto.value;
-    document.getElementById("card").style.width = ancho.value;
-  }
+  let x = alto.value ? `${alto.value}px` : "";
+  card.style.height = x;
+  let y = ancho.value ? `${ancho.value}px` : "";
+  card.style.width = y;
 }
+alto.addEventListener("input", nuevoTamaño);
+ancho.addEventListener("input", nuevoTamaño);
